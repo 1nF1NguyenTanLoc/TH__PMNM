@@ -28,7 +28,7 @@
     })
 
     $('#edit-btn').click(function() {
-        editUserInfo();
+        editUserInfo;
     })
 
     $('#edit-pw-btn').click(function() {
