@@ -2,6 +2,7 @@
     $(".cart-container").click(function() {
         $(this).toggleClass('cart-ordered');
         var masp = $(this).data('masp');
+        addToCart(masp);
     });
 
     $('.num').on('change', function() {
@@ -115,19 +116,19 @@
 //     });
 // }
 
-// function addToCart(masp) {
-//     $.ajax({
-//         url: "Client/addtocart",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             masp
-//         },
-//         success: function(result) {
-//             $('#cart_count').html(result);
-//         }
-//     });
-// }
+function addToCart(masp) {
+    $.ajax({
+        url: "Client/addtocart",
+        type: "post",
+        dataType: "text",
+        data: {
+            masp
+        },
+        success: function(result) {
+            $('#cart_count').html(result);
+        }
+    });
+}
 
 // function countPrice() {
 //     var num = [];
