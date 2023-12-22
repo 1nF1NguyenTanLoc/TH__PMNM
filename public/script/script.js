@@ -32,7 +32,7 @@
     })
 
     $('#edit-pw-btn').click(function() {
-        editPw();
+        editPw;
     })
 
     $('#searchBtn').click(function() {
