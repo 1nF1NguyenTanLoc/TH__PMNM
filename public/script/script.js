@@ -6,7 +6,7 @@
     });
 
     $('.num').on('change', function() {
-        countPrice();
+        return 0;
     });
 
     $('#loginBtn').click(function() {
