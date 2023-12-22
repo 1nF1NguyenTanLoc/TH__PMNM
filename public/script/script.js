@@ -17,7 +17,6 @@
         var cf = confirm('Xóa sản phẩm này khỏi giỏ hàng?');
         masp = $(this).data('masp');
         if (cf) {
-            $(this).parent().closest('tr').remove();
             delPrd(masp);
             countPrice();
         }
