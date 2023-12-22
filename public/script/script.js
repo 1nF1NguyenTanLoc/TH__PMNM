@@ -36,7 +36,7 @@
     })
 
     $('#searchBtn').click(function() {
-        search();
+        search;
     })
 
 });
