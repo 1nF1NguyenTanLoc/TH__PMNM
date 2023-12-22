@@ -17,6 +17,7 @@
         var cf = confirm('Xóa sản phẩm này khỏi giỏ hàng?');
         masp = $(this).data('masp');
         if (cf) {
+            $(this).parent().closest('tr').remove();
             delPrd(masp);
             countPrice();
         }
@@ -146,19 +147,19 @@ function addToCart(masp) {
 //     $('#totalPrice').html(sum);
 // }
 
-// function delPrd(masp) {
-//     $.ajax({
-//         url: "Client/delPrd",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             masp
-//         },
-//         success: function(result) {
-//             $('#cart_count').html(result);
-//         }
-//     });
-// }
+function delPrd(masp) {
+    $.ajax({
+        url: "Client/delPrd",
+        type: "post",
+        dataType: "text",
+        data: {
+            masp
+        },
+        success: function(result) {
+            $('#cart_count').html(result);
+        }
+    });
+}
 
 // function orderComplete() {
 //     var num = [];
