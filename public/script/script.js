@@ -41,22 +41,22 @@
 
 });
 
-// function Display_PrdDetail(masp) {
-//     $('#modal-id').attr('data-remote', 'product/PrdDetail/' + masp);
-//     $('#modal-sanpham').empty();
+function Display_PrdDetail(masp) {
+    $('#modal-id').attr('data-remote', 'product/PrdDetail/' + masp);
+    $('#modal-sanpham').empty();
 
-//     $.ajax({
-//         url: "product/PrdDetail/" + masp,
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             masp
-//         },
-//         success: function(result) {
-//             $('#modal-sanpham').html(result);
-//         }
-//     });
-// }
+    $.ajax({
+        url: "product/PrdDetail/" + masp,
+        type: "post",
+        dataType: "text",
+        data: {
+            masp
+        },
+        success: function(result) {
+            $('#modal-sanpham').html();
+        }
+    });
+}
 
 // function login() {
 //     var username = $('#username').val();
