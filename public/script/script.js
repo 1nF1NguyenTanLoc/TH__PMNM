@@ -116,19 +116,19 @@ function register() {
     });
 }
 
-// function addToCart(masp) {
-//     $.ajax({
-//         url: "Client/addtocart",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             masp
-//         },
-//         success: function(result) {
-//             $('#cart_count').html(result);
-//         }
-//     });
-// }
+function addToCart(masp) {
+    $.ajax({
+        url: "Client/addtocart",
+        type: "post",
+        dataType: "text",
+        data: {
+            masp
+        },
+        success: function(result) {
+            $('#cart_count').html(result);
+        }
+    });
+}
 
 // function countPrice() {
 //     var num = [];
@@ -147,19 +147,19 @@ function register() {
 //     $('#totalPrice').html(sum);
 // }
 
-// function delPrd(masp) {
-//     $.ajax({
-//         url: "Client/delPrd",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             masp
-//         },
-//         success: function(result) {
-//             $('#cart_count').html(result);
-//         }
-//     });
-// }
+function delPrd(masp) {
+    $.ajax({
+        url: "Client/delPrd",
+        type: "post",
+        dataType: "text",
+        data: {
+            masp
+        },
+        success: function(result) {
+            $('#cart_count').html(result);
+        }
+    });
+}
 
 // function orderComplete() {
 //     var num = [];
