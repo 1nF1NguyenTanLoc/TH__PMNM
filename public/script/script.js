@@ -36,7 +36,7 @@
     })
 
     $('#searchBtn').click(function() {
-        search;
+        search();
     })
 
 });
@@ -275,18 +275,18 @@ function login() {
 //     });
 // }
 
-// function search() {
-//     var q = $('#srch-val').val();
-//     $('#bodyContainer').empty();
-//     $.ajax({
-//         url: "client/search",
-//         type: "get",
-//         dataType: "text",
-//         data: {
-//             q
-//         },
-//         success: function(result) {
-//             $('#bodyContainer').html(result);
-//         }
-//     });
-// }
+function search() {
+    var q = $('#srch-val').val();
+    $('#bodyContainer').empty();
+    $.ajax({
+        url: "client/search",
+        type: "get",
+        dataType: "text",
+        data: {
+            q
+        },
+        success: function(result) {
+            $('#bodyContainer').html(result);
+        }
+    });
+}
