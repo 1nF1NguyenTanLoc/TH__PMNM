@@ -24,7 +24,7 @@
     })
 
     $('#orderCompleteBtn').click(function() {
-        orderComplete;
+        orderComplete();
     })
 
     $('#edit-btn').click(function() {
@@ -161,51 +161,51 @@
 //     });
 // }
 
-// function orderComplete() {
-//     var num = [];
-//     var sp = [];
-//     var ten = $('#ten').val();
-//     var sdt = $('#order_tel').val();
-//     var quan = $('#quan').val();
-//     var dc = $('#addr').val();
-//     var type = ' ';
-//     $('.num').each(function() {
-//         num.push($(this).val());
-//         type = $(this).data('type');
-//     });
-//     $('.sanpham').each(function() {
-//         sp.push($(this).data('masp'));
-//     });
-//     $.ajax({
-//         url: "Client/orderComplete",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             ten,
-//             sdt,
-//             quan,
-//             dc,
-//             sp,
-//             num,
-//             type
-//         },
-//         success: function(result) {
-//             // if (result == 'Vui lòng điền đầy đủ thông tin!') {
-//             //     $('#thieu-thong-tin').html(result);
-//             //     return 0;
-//             // } else {
-//             //     $('body').html(result);
-//             // }
-//             if (result == 'Vui lòng điền đầy đủ thông tin!') {
-//                 $('.errorMes')[0].style.display = "block";
-//                 $('.errorMes').html(result);
-//                 return 0;
-//             } else {
-//                 $('body').html(result);
-//             }
-//         }
-//     });
-// }
+function orderComplete() {
+    var num = [];
+    var sp = [];
+    var ten = $('#ten').val();
+    var sdt = $('#order_tel').val();
+    var quan = $('#quan').val();
+    var dc = $('#addr').val();
+    var type = ' ';
+    $('.num').each(function() {
+        num.push($(this).val());
+        type = $(this).data('type');
+    });
+    $('.sanpham').each(function() {
+        sp.push($(this).data('masp'));
+    });
+    $.ajax({
+        url: "Client/orderComplete",
+        type: "post",
+        dataType: "text",
+        data: {
+            ten,
+            sdt,
+            quan,
+            dc,
+            sp,
+            num,
+            type
+        },
+        success: function(result) {
+            // if (result == 'Vui lòng điền đầy đủ thông tin!') {
+            //     $('#thieu-thong-tin').html(result);
+            //     return 0;
+            // } else {
+            //     $('body').html(result);
+            // }
+            if (result == 'Vui lòng điền đầy đủ thông tin!') {
+                $('.errorMes')[0].style.display = "block";
+                $('.errorMes').html(result);
+                return 0;
+            } else {
+                $('body').html(result);
+            }
+        }
+    });
+}
 
 // function loadmore(start) {
 //     var next = start + 8;
