@@ -48,7 +48,7 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 			<!-- <li><a href="client/viewcart"><i class="glyphicon glyphicon-shopping-cart"></i> Giỏ hàng</a><div class="mn-ef"></div></li> -->
 		</ul>
 		<div class="header-detail">
-			<p>113 Hoàng Sa, Đa Kao, Tân Bình, Hồ Chí Minh, Việt Nam<br>
+			<p>180 Cao Lỗ, Phường 4, Quận8, Hồ Chí Minh, Việt Nam<br>
 				<i>8h - 22h Hằng ngày, kể cả Ngày lễ và Chủ nhật</i>
 			</p>
 		</div>
@@ -138,8 +138,8 @@ if(isset($_COOKIE['user']) && !isset($_SESSION['user'])){
 				</div>
 				<div class="col-lg-4" id="contact">
 					<h3>Contact</h3>
-					<i class="glyphicon glyphicon-map-marker"></i><span> Linh Trung, Thủ Đức, tp.HCM</span><br>
-					<i class="glyphicon glyphicon-earphone"></i><span> (08) 391 525</span><br>
+					<i class="glyphicon glyphicon-map-marker"></i><span>180 Cao Lỗ, Phường 4, Quận8, Hồ Chí Minh, Việt Nam</span><br>
+					<i class="glyphicon glyphicon-earphone"></i><span> 032 721 21 93</span><br>
 					<i class="glyphicon glyphicon-envelope"></i><span> 9XWatch@gmail.com</span><br>
 					<h4 style="line-height: 26px">Nhận email thông báo của chúng tôi khi có sản phẩm mới hay giảm giá:</h4>
 					<form action="" method="POST" class="form-inline" role="form">
