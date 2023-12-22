@@ -207,26 +207,26 @@ function orderComplete() {
     });
 }
 
-// function loadmore(start) {
-//     var next = start + 8;
-//     var q = $('#srch-val').val();
-//     $('#loadmoreBtn').attr('onclick', 'loadmore(' + next + ')');
-//     var type = $('#contentTitle').data('type');
-//     $.ajax({
-//         url: "Client/loadmore",
-//         type: "get",
-//         dataType: "text",
-//         data: {
-//             start,
-//             type,
-//             q
-//         },
-//         success: function(result) {
-//             if (!result) { alert("Đã hết sản phẩm để hiển thị!"); return 0; }
-//             $('#prdCtn').append(result);
-//         }
-//     });
-// }
+function loadmore(start) {
+    var next = start + 8;
+    var q = $('#srch-val').val();
+    $('#loadmoreBtn').attr('onclick', 'loadmore(' + next + ')');
+    var type = $('#contentTitle').data('type');
+    $.ajax({
+        url: "Client/loadmore",
+        type: "get",
+        dataType: "text",
+        data: {
+            start,
+            type,
+            q
+        },
+        success: function(result) {
+            if (!result) { alert("Đã hết sản phẩm để hiển thị!"); return 0; }
+            $('#prdCtn').append(result);
+        }
+    });
+}
 
 // function editUserInfo() {
 //     var name = $('#name').val();
