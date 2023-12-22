@@ -15,7 +15,7 @@
 				} ?>' data-masp='<?php echo $data[$i]['masp'] ?>' >
 				<i title='Thêm vào giỏ hàng' class='glyphicon glyphicon-shopping-cart cart-item'></i>
 			</a>
-			<a href="client/buynow/<?php echo $data[$i]['masp'] ?>" class="snip0050"><span>Mua ngay</span><i class="glyphicon glyphicon-ok"></i>
+			<a href="client/buynow/" class="snip0050"><span>Mua ngay</span><i class="glyphicon glyphicon-ok"></i>
 			</a>
 		</div>
 	</div>
