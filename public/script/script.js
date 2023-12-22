@@ -28,7 +28,7 @@
     })
 
     $('#edit-btn').click(function() {
-        editUserInfo;
+        editUserInfo();
     })
 
     $('#edit-pw-btn').click(function() {
@@ -228,27 +228,27 @@
 //     });
 // }
 
-// function editUserInfo() {
-//     var name = $('#name').val();
-//     var addr = $('#addr').val();
-//     var tel = $('#tel').val();
-//     var email = $('#email').val();
-//     $.ajax({
-//         url: "user/editinfo",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             name,
-//             addr,
-//             tel,
-//             email
-//         },
-//         success: function(result) {
-//             alert("Thay đổi thông tin thành công!");
-//             location.reload();
-//         }
-//     });
-// }
+function editUserInfo() {
+    var name = $('#name').val();
+    var addr = $('#addr').val();
+    var tel = $('#tel').val();
+    var email = $('#email').val();
+    $.ajax({
+        url: "user/editinfo",
+        type: "post",
+        dataType: "text",
+        data: {
+            name,
+            addr,
+            tel,
+            email
+        },
+        success: function(result) {
+            alert("Thay đổi thông tin thành công!");
+            location.reload();
+        }
+    });
+}
 
 // function editPw() {
 //     var opw = $('#oldpw').val();
