@@ -36,7 +36,7 @@
 				</div>
 				
 			
-				<div class="btn btn-success" onclick="register">Submit</div> |
+				<div class="btn btn-success" onclick="register()">Submit</div> |
 				<a class="btn btn-primary" href="./index.php">Quay lại</a><br><br>
 				<a href="index/signin" style="float: right;">Đăng nhập</a><br>
 			</form>

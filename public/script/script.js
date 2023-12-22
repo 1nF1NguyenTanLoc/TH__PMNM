@@ -83,38 +83,38 @@
 //     });
 // }
 
-// function register() {
-//     var name = $('#name').val();
-//     var username = $('#username').val();
-//     var password = $('#password').val();
-//     var cpassword = $('#cpassword').val();
-//     var addr = $('#addr').val();
-//     var tel = $('#tel').val();
-//     var email = $('#email').val();
-//     $.ajax({
-//         url: "user/register",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             name,
-//             username,
-//             password,
-//             cpassword,
-//             addr,
-//             tel,
-//             email
-//         },
-//         success: function(result) {
-//             if (result == 'RegisterSuccess') {
-//                 alert('Tạo tài khoản thành công!');
-//                 window.location.replace("http://localhost/WBH_MVC/");
-//             } else {
-//                 $('.errorMes')[0].style.display = "block";
-//                 $('.errorMes').html(result);
-//             }
-//         }
-//     });
-// }
+function register() {
+    var name = $('#name').val();
+    var username = $('#username').val();
+    var password = $('#password').val();
+    var cpassword = $('#cpassword').val();
+    var addr = $('#addr').val();
+    var tel = $('#tel').val();
+    var email = $('#email').val();
+    $.ajax({
+        url: "user/register",
+        type: "post",
+        dataType: "text",
+        data: {
+            name,
+            username,
+            password,
+            cpassword,
+            addr,
+            tel,
+            email
+        },
+        success: function(result) {
+            if (result == 'RegisterSuccess') {
+                alert('Tạo tài khoản thành công!');
+                window.location.replace("http://localhost/WBH_MVC/");
+            } else {
+                $('.errorMes')[0].style.display = "block";
+                $('.errorMes').html(result);
+            }
+        }
+    });
+}
 
 // function addToCart(masp) {
 //     $.ajax({
