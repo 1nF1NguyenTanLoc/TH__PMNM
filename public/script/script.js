@@ -250,30 +250,30 @@ function register() {
 //     });
 // }
 
-// function editPw() {
-//     var opw = $('#oldpw').val();
-//     var npw = $('#newpw').val();
-//     var cnpw = $('#cnewpw').val();
-//     $.ajax({
-//         url: "user/editpassword",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             opw,
-//             npw,
-//             cnpw
-//         },
-//         success: function(result) {
-//             if (result == 'Mật khẩu cũ sai!' || result == 'Nhập lại mật khẩu không trùng khớp!') {
-//                 $('#edit-info-error').html(result);
-//                 return 0;
-//             } else {
-//                 alert("Đổi mật khẩu thành công!");
-//                 location.reload();
-//             }
-//         }
-//     });
-// }
+function editPw() {
+    var opw = $('#oldpw').val();
+    var npw = $('#newpw').val();
+    var cnpw = $('#cnewpw').val();
+    $.ajax({
+        url: "user/editpassword",
+        type: "post",
+        dataType: "text",
+        data: {
+            opw,
+            npw,
+            cnpw
+        },
+        success: function(result) {
+            if (result == 'Mật khẩu cũ sai!' || result == 'Nhập lại mật khẩu không trùng khớp!') {
+                $('#edit-info-error').html(result);
+                return 0;
+            } else {
+                alert("Đổi mật khẩu thành công!");
+                location.reload();
+            }
+        }
+    });
+}
 
 function search() {
     var q = $('#srch-val').val();
