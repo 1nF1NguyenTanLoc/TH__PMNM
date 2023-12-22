@@ -24,7 +24,7 @@
     })
 
     $('#orderCompleteBtn').click(function() {
-        orderComplete();
+        orderComplete;
     })
 
     $('#edit-btn').click(function() {
