@@ -53,7 +53,7 @@ function Display_PrdDetail(masp) {
             masp
         },
         success: function(result) {
-            $('#modal-sanpham').html();
+            $('#modal-sanpham').html(result);
         }
     });
 }
