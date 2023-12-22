@@ -6,7 +6,7 @@
     });
 
     $('.num').on('change', function() {
-        return 0;
+        countPrice();
     });
 
     $('#loginBtn').click(function() {
@@ -130,22 +130,22 @@
 //     });
 // }
 
-// function countPrice() {
-//     var num = [];
-//     var price = [];
-//     $('.num').each(function() {
-//         num.push($(this).val());
-//     });
-//     $(".prices").each(function() {
-//         price.push(parseInt($(this).data('price').replace(/\s/g, '')));
-//     });
-//     var sum = 0;
-//     for (var i = 0; i < num.length; i++) {
-//         sum += num[i] * price[i];
-//     }
-//     sum = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-//     $('#totalPrice').html(sum);
-// }
+function countPrice() {
+    var num = [];
+    var price = [];
+    $('.num').each(function() {
+        num.push($(this).val());
+    });
+    $(".prices").each(function() {
+        price.push(parseInt($(this).data('price').replace(/\s/g, '')));
+    });
+    var sum = 0;
+    for (var i = 0; i < num.length; i++) {
+        sum += num[i] * price[i];
+    }
+    sum = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    $('#totalPrice').html(sum);
+}
 
 // function delPrd(masp) {
 //     $.ajax({
