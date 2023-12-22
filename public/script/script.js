@@ -2,7 +2,6 @@
     $(".cart-container").click(function() {
         $(this).toggleClass('cart-ordered');
         var masp = $(this).data('masp');
-        addToCart(masp);
     });
 
     $('.num').on('change', function() {
