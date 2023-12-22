@@ -58,30 +58,30 @@
 //     });
 // }
 
-// function login() {
-//     var username = $('#username').val();
-//     var password = $('#password').val();
-//     var rmbme = $('#rmbme').is(':checked');
-//     $.ajax({
-//         url: "user/login",
-//         type: "post",
-//         dataType: "text",
-//         data: {
-//             username,
-//             password,
-//             rmbme
-//         },
-//         success: function(result) {
-//             if (result == 'LoginSuccess') {
-//                 /*$('.errorMes').html(result);*/
-//                 window.location.replace("http://localhost/WBH_MVC/");
-//             } else {
-//                 $('.errorMes')[0].style.display = "block";
-//                 $('.errorMes').html(result);
-//             }
-//         }
-//     });
-// }
+function login() {
+    var username = $('#username').val();
+    var password = $('#password').val();
+    var rmbme = $('#rmbme').is(':checked');
+    $.ajax({
+        url: "user/login",
+        type: "post",
+        dataType: "text",
+        data: {
+            username,
+            password,
+            rmbme
+        },
+        success: function(result) {
+            if (result == 'LoginSuccess') {
+                /*$('.errorMes').html(result);*/
+                window.location.replace("http://localhost/WBH_MVC/");
+            } else {
+                $('.errorMes')[0].style.display = "block";
+                $('.errorMes').html(result);
+            }
+        }
+    });
+}
 
 // function register() {
 //     var name = $('#name').val();
