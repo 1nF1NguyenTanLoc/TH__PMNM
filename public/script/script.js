@@ -10,7 +10,7 @@
     });
 
     $('#loginBtn').click(function() {
-        login();
+        login;
     })
 
     $('.delPrd').click(function() {
